@@ -7,6 +7,18 @@
  * @Description: file:///Users/aj/sandbox/just-another-online-store/zzAJ/notes.txt
  */
 
+=========
+TODO:
+
+- add google trends RSS feed data
+- Incorporate reviews
+- Recommender system
+- ratings
+- Site design
+- packagist
+- stripe integration
+
+
 
 ===========
 
@@ -19,4 +31,4 @@ Laravel Controllers
 
 =======
 
- 
+
