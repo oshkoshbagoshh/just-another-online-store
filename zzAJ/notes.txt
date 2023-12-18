@@ -31,4 +31,22 @@ Laravel Controllers
 
 =======
 
+Chapter 7 - Refactoring
+
+
+- refactored so we can now access the data
+through the single viewData associative array this makes views way more consistent
+
+- TODO: localization
+
+
+
+
+=====
+
+Chapter 8 -  Use of a coding standard
+
+* PSR-2
+
+* PHP Code sniffer
 
