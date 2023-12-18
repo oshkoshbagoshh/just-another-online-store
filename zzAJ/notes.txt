@@ -10,4 +10,13 @@
 
 ===========
 
-Laravel Routing is used to 
+Laravel Routing
+
+======
+
+Laravel Controllers
+
+
+=======
+
+ 
