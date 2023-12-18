@@ -1,0 +1,13 @@
+/*
+ * @Author: AJ Javadi
+ * @Email: amirjavadi25@gmail.com
+ * @Date: 2023-12-17 17:57:42
+ * @Last Modified by:   Someone
+ * @Last Modified time: 2023-12-17 17:58:46
+ * @Description: file:///Users/aj/sandbox/just-another-online-store/zzAJ/notes.txt
+ */
+
+
+===========
+
+Laravel Routing is used to 
