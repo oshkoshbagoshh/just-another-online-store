@@ -68,3 +68,13 @@ php artisan make:migration create_products_table
 
 
 ===========
+
+Chapter 12 - Product Model / Eloquent
+
+
+======
+
+Chapter 13 - List Products with Database data
+
+
+=======
