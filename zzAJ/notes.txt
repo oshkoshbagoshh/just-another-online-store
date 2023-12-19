@@ -3,7 +3,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-12-17 17:57:42
  * @Last Modified by:   Someone
- * @Last Modified time: 2023-12-19 13:00:17
+ * @Last Modified time: 2023-12-19 15:26:12
  * @Description: file:///Users/aj/sandbox/just-another-online-store/zzAJ/notes.txt
  */
 
@@ -56,3 +56,13 @@ Chapter 9 - Using Dummy Data to fill the database
 
 =======
 
+Chapter 10 - Configuration of MySQL database
+
+CREATE DATABASE onlinestore;
+USE DATABASE onlinestore;
+===========
+
+Chapter 11 - Product Migration
+
+
+===========
