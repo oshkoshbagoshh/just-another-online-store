@@ -3,7 +3,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-12-17 17:57:42
  * @Last Modified by:   Someone
- * @Last Modified time: 2023-12-19 15:26:12
+ * @Last Modified time: 2023-12-19 15:53:53
  * @Description: file:///Users/aj/sandbox/just-another-online-store/zzAJ/notes.txt
  */
 
@@ -63,6 +63,8 @@ USE DATABASE onlinestore;
 ===========
 
 Chapter 11 - Product Migration
+
+php artisan make:migration create_products_table
 
 
 ===========
