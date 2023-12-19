@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-
 // Home Controller
 
 class HomeController extends Controller
@@ -28,10 +27,5 @@ class HomeController extends Controller
         $viewData["description"] = "This is an about us page...";
         $viewData["author"] = "Developed by: AJ Javadi.";
         return view('home.about')->with("viewData", $viewData);
-
     }
 }
-
-
-
-?>
