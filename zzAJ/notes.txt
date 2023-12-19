@@ -3,7 +3,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-12-17 17:57:42
  * @Last Modified by:   Someone
- * @Last Modified time: 2023-12-17 17:58:46
+ * @Last Modified time: 2023-12-19 13:00:17
  * @Description: file:///Users/aj/sandbox/just-another-online-store/zzAJ/notes.txt
  */
 
@@ -49,4 +49,10 @@ Chapter 8 -  Use of a coding standard
 * PSR-2
 
 * PHP Code sniffer
+
+=======
+
+Chapter 9 - Using Dummy Data to fill the database
+
+=======
 

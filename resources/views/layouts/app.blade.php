@@ -23,6 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="{{ route('home.index') }}"> Home </a>
+                    <a class="nav-link active" href="{{ route('product.index') }}"> Products</a>
                     <a class="nav-link active" href="{{  route('home.about') }}"> About </a>
                 </div>
             </div>
@@ -57,8 +58,9 @@
 --->
 
 
-    (c) Copyright 2023 Scrooge McDuck. All Rights Reserved. <a class="text-reset fw-bold text-decoration-none" target="_blank"
-            href=https://en.wikipedia.org/wiki/Scrooge_McDuck"> Scrooge McDuck </a>
+    (c) Copyright 2023 Scrooge McDuck. All Rights Reserved.
+    <a class="text-reset fw-bold text-decoration-none" target="_blank"
+            href="https://en.wikipedia.org/wiki/Scrooge_McDuck"> Scrooge McDuck </a>
 
 
 
@@ -69,7 +71,7 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npn/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
 </body>
 
