@@ -17,10 +17,11 @@ return new class extends Migration
     public function up()
 
     {
-        Schema::create('products', function(Blueprint $table) { // Added missing closing parenthesis after $table
+        Schema::create('products', function(Blueprint $table) { 
             $table->id();
             $table->string('name');
-            $table->text('description'); // Fixed typo: changed $table-text to $table->text
+            $table->text('description');
+            $table->string('image');
             $table->integer('price');
             $table->timestamps();
 
