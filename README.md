@@ -74,6 +74,8 @@ If your README is long, add a table of contents to make it easy for users to fin
   - [Features](#features)
   - [How to Contribute](#how-to-contribute)
   - [Tests](#tests)
+  - [Deployment](#deployment)
+  - [Demo](#demo)
 <!-- 
 ## Installation
 
@@ -126,4 +128,12 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 
 <!-- Go the extra mile and write tests for your application. Then provide examples on how to run them here. -->
 
+
+## Deployment 
+
+- will deploy onto Heroku when finished building 
+
+## Demo 
+
+- will attach a video displaying the features
 

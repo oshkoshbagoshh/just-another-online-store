@@ -3,7 +3,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-12-17 17:57:42
  * @Last Modified by:   Someone
- * @Last Modified time: 2023-12-19 20:37:15
+ * @Last Modified time: yyyy-12-dd 20:46:43
  * @Description: file:///Users/aj/sandbox/just-another-online-store/zzAJ/notes.txt
  */
 
@@ -96,3 +96,4 @@ $product = Product::findOrFail(1);
 - the reason this is not maintainable is because if you later have to change it (example: boss says we need to change all product names to Upper case, we now must now find all instances of this and use  strtoupper($product["name"] across many places ))
 - this is why we use getters and setters
 
+============
