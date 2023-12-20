@@ -3,7 +3,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-12-17 17:57:42
  * @Last Modified by:   Someone
- * @Last Modified time: 2023-12-19 15:53:53
+ * @Last Modified time: 2023-12-19 19:49:54
  * @Description: file:///Users/aj/sandbox/just-another-online-store/zzAJ/notes.txt
  */
 
@@ -79,6 +79,20 @@ Chapter 13 - List Products with Database data
 - refactored product model.
 - replaced dummy data with database data using Eloquent model
 - Note: using the FindOrFail could throw a Model not found Exception (like when passing through an invalid ID).
-- If this happens, then a 404 HTTP response code is automatically sent back to the client 
+- If this happens, then a 404 HTTP response code is automatically sent back to the client
 
 ======
+
+Chapter 14 - Refactoring List Products
+
+- we decclare the model's attributes in the form of $this->atrrributes['id']. This is because laravelEloquent stores the models's attributes in a class array called $attribues
+- we can access it in 2 ways:
+
+$product = Product::findOrFail(1);
+1. echo $product->name; // prints the product's name using object style
+2. echo $product['name'] // prints the product's name, but using associative array
+
+- instead of using those two ways, we use something called getters and setters. We are currently using associative array but are going to refactor it
+- the reason this is not maintainable is because if you later have to change it (example: boss says we need to change all product names to Upper case, we now must now find all instances of this and use  strtoupper($product["name"] across many places ))
+- this is why we use getters and setters
+
