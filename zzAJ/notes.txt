@@ -1,3 +1,4 @@
+-- Active: 1695684148419@@127.0.0.1@3306@justanotheronlinestore_db
 /*
  * @Author: AJ Javadi
  * @Email: amirjavadi25@gmail.com
@@ -150,6 +151,12 @@ Chapter 17 - Create Products
 - then we create a newProduct instance and set the newProduct attributes based on values collected from the form.
 - then, we invoke the save method, which inserts the object into the database
 - NOTE: you can also use the HTML required attribute on the form for fields you need, but we don't need that since we're using Laravel's validations
+- TODO: check out advanced version with hasSetMutator and setMutatedAttributes git repo
 
+======
 
+Chapter 18 - Create Products with Images
 
+-  storage class with set of methods
+- need to create a symbolic link to make the files accessible on the web
+- once we run the app, the users an only access files inside the public/ folder. 
