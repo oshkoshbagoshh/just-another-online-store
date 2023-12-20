@@ -20,3 +20,9 @@ read dir_path
 mkdir -p "$dir_path"
 echo "Directory $dir_path has been created."
 
+
+# php artisan serve
+php artisan serve
+
+# TODO: zip the current file and folder structure and make a backup
+

@@ -142,3 +142,7 @@ Chapter 16 - List Products in Admin Panel
 
 Chapter 17 - Create Products
 
+- focus on the admin panel system to create products
+-/admin/products/store route will collect and store the newly created products data using a post HTTP request using a form with the controller method
+
+
