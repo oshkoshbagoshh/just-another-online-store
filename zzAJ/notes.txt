@@ -68,3 +68,17 @@ php artisan make:migration create_products_table
 
 
 ===========
+
+Chapter 12 - Product Model / Eloquent
+
+
+======
+
+Chapter 13 - List Products with Database data
+
+- refactored product model.
+- replaced dummy data with database data using Eloquent model
+- Note: using the FindOrFail could throw a Model not found Exception (like when passing through an invalid ID).
+- If this happens, then a 404 HTTP response code is automatically sent back to the client 
+
+======
