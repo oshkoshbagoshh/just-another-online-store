@@ -94,6 +94,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
     - 2023-12-20 02:27:59
     - POST request (adding in data via the form and automatically displaying the newly added product in the table)
+    
     ![gif](assets/chrome-capture-2023-12-20.gif)
     
 
