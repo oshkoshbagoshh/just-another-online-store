@@ -143,6 +143,13 @@ Chapter 16 - List Products in Admin Panel
 Chapter 17 - Create Products
 
 - focus on the admin panel system to create products
--/admin/products/store route will collect and store the newly created products data using a post HTTP request using a form with the controller method
+- /admin/products/store route will collect and store the newly created products data using a post HTTP request using a form with the controller method
+- in the AdminProductController.php file we create use a store function to receive a $request object which allows us to interact with the HTTP requeast handled by our app. This allows us to receive the inputs, cookies, and files from the request
+- then we use the validate method provided by the $request object. If the validation rules pass it keeps going, otherwise it will throw an Exception
+- TODO: check out the available validation rules in the docs
+- then we create a newProduct instance and set the newProduct attributes based on values collected from the form.
+- then, we invoke the save method, which inserts the object into the database
+- NOTE: you can also use the HTML required attribute on the form for fields you need, but we don't need that since we're using Laravel's validations
+
 
 
