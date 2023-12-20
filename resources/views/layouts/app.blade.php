@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
     <meta charset="UTF-8" />
