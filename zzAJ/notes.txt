@@ -28,6 +28,10 @@ TODO:
 - admin image
 - prof pic
 - link to LinkTree
+- updated to the newest version of laravel and bootstrap
+- coupons.js
+
+
 
 
 
@@ -131,4 +135,10 @@ Chapter 15 - Admin Panel
 Chapter 16 - List Products in Admin Panel
 
 - new route of  /admin/products will be the entry point to manage our products
+
+- used bootstrap to create a table element that displays for all of the products
+
+==========
+
+Chapter 17 - Create Products
 
