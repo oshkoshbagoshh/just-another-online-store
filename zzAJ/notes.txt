@@ -159,4 +159,10 @@ Chapter 18 - Create Products with Images
 
 -  storage class with set of methods
 - need to create a symbolic link to make the files accessible on the web
-- once we run the app, the users an only access files inside the public/ folder. 
+- once we run the app, the users an only access files inside the public/ folder.
+
+=============
+
+Chapter 19 - Edit and Delete Products
+
+
