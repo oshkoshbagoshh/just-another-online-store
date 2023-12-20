@@ -17,6 +17,14 @@ TODO:
 - Site design
 - packagist
 - stripe integration
+- Vue
+- Faker
+- Third Party Packages
+- unsplash API
+- display random
+- coupon functionality (lucky chance you get a coupoun code )
+
+
 
 
 
@@ -97,3 +105,5 @@ $product = Product::findOrFail(1);
 - this is why we use getters and setters
 
 ============
+
+
