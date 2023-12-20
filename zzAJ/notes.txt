@@ -116,3 +116,19 @@ $product = Product::findOrFail(1);
 Chapter 15 - Admin Panel
 
 
+- Created route, controller, and view for /admin page
+
+- extended the basic layouts but made a new directory called admin with a index in it
+
+- added GET routes in the web.php file
+
+- tested and works, but need to restrict access to it so that only those that are authorized can access it
+
+
+
+========
+
+Chapter 16 - List Products in Admin Panel
+
+- new route of  /admin/products will be the entry point to manage our products
+

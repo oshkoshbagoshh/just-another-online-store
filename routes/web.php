@@ -29,6 +29,8 @@ Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->na
 
 
 
+Route::get("/admin/products", 'App\Http\Controllers\Admin\AdminProductsController@index')->name("admin.product.index");
+
 
 
 ?>
