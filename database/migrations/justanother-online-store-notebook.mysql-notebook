@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nUSE justanotheronlinestore_db;\nINSERT INTO products (id, name, description, image, price, created_at, updated_at) \nVALUES (NULL, 'TV', 'Best TV', 'game.png', '1000', '2021-10-01 00:00:00','2021-10-01 00:00:00');\n",
+    "content": "\\about\nUSE justanotheronlinestore_db;\nINSERT INTO products (id, name, description, image, price, created_at, updated_at) \nVALUES (NULL, 'TV', 'Best TV', 'game.png', '1000', '2021-10-01 00:00:00','2021-10-01 00:00:00');\nuse justanotheronlinestore_db;\nSHOW TABLES;\nSELECT * FROM users;\nSHOW TABLES;\nSHOW TABLES;\n\nSELECT * FROM users;\nSELECT * FROM products;\nSELECT * FROM items;\nSELECT * FROM orders;\nSHOW SCHEMA users;\nSHOW SCHEMAS;\nuse justanotheronlinestore_db;\nSHOW TABLE users;\n",
     "options": {
         "tabSize": 4,
         "insertSpaces": true,
@@ -15,11 +15,11 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 5,
+                    "lineNumber": 19,
                     "column": 1
                 },
                 "position": {
-                    "lineNumber": 5,
+                    "lineNumber": 19,
                     "column": 1
                 }
             }
@@ -27,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 1,
+                "lineNumber": 17,
                 "column": 1
             },
-            "firstPositionDeltaTop": 0
+            "firstPositionDeltaTop": 277
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -134,6 +134,735 @@
             "state": {
                 "start": 5,
                 "end": 5,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "4bf102b7-70cf-47e7-d08e-612447acbcfd",
+                            "content": "OK, 0 records retrieved in 4.04ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 30
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 6,
+                "end": 6,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "917a9581-ab29-4a8c-df9e-19c2f34ae3a7"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "36b66635-9443-4453-8d3a-f6448c6027dc",
+                    "resultId": "917a9581-ab29-4a8c-df9e-19c2f34ae3a7",
+                    "rows": [
+                        {
+                            "0": "failed_jobs"
+                        },
+                        {
+                            "0": "migrations"
+                        },
+                        {
+                            "0": "password_resets"
+                        },
+                        {
+                            "0": "personal_access_tokens"
+                        },
+                        {
+                            "0": "products"
+                        },
+                        {
+                            "0": "users"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_justanotheronlinestore_db",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 5.532ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SHOW TABLES"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 7,
+                "end": 7,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "8da8b602-d2a3-4823-f654-d2894db90a61"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "36b66635-9443-4453-8d3a-f6448c6027dc",
+                    "resultId": "8da8b602-d2a3-4823-f654-d2894db90a61",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Test",
+                            "2": "test@test.com",
+                            "3": null,
+                            "4": "$2y$10$eG45go/rohDau9O5bw8X3uSZaCJB32kYLXhCB7lhK4q6LGikpnSn6",
+                            "5": null,
+                            "6": "2023-12-21 05:08:44",
+                            "7": "2023-12-21 05:08:44",
+                            "8": "client",
+                            "9": 5000
+                        },
+                        {
+                            "0": 2,
+                            "1": "AJ",
+                            "2": "aj@gmail.com",
+                            "3": null,
+                            "4": "$2y$10$Xdxe7OsJ.K.PKaHPhNBGTu3bhWEFNZc.qs7nq6LRJQHgSJc/71eo2",
+                            "5": null,
+                            "6": "2023-12-21 05:12:46",
+                            "7": "2023-12-21 05:12:46",
+                            "8": "admin",
+                            "9": 5000
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 5
+                            }
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "email",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "email_verified_at",
+                            "field": "3",
+                            "dataType": {
+                                "type": 26
+                            }
+                        },
+                        {
+                            "title": "password",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "remember_token",
+                            "field": "5",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "created_at",
+                            "field": "6",
+                            "dataType": {
+                                "type": 26
+                            }
+                        },
+                        {
+                            "title": "updated_at",
+                            "field": "7",
+                            "dataType": {
+                                "type": 26
+                            }
+                        },
+                        {
+                            "title": "role",
+                            "field": "8",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "balance",
+                            "field": "9",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 1.782ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM users"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 8,
+                "end": 8,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "41b3916d-425e-4ccd-cd05-1e749fb535d1"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "36b66635-9443-4453-8d3a-f6448c6027dc",
+                    "resultId": "41b3916d-425e-4ccd-cd05-1e749fb535d1",
+                    "rows": [
+                        {
+                            "0": "failed_jobs"
+                        },
+                        {
+                            "0": "migrations"
+                        },
+                        {
+                            "0": "password_resets"
+                        },
+                        {
+                            "0": "personal_access_tokens"
+                        },
+                        {
+                            "0": "products"
+                        },
+                        {
+                            "0": "users"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_justanotheronlinestore_db",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 18.579ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SHOW TABLES"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 9,
+                "end": 10,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "a1fabf10-f928-4cba-e628-290c1692f96d"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 1
+                        },
+                        "contentStart": 11,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "36b66635-9443-4453-8d3a-f6448c6027dc",
+                    "resultId": "a1fabf10-f928-4cba-e628-290c1692f96d",
+                    "rows": [
+                        {
+                            "0": "failed_jobs"
+                        },
+                        {
+                            "0": "items"
+                        },
+                        {
+                            "0": "migrations"
+                        },
+                        {
+                            "0": "orders"
+                        },
+                        {
+                            "0": "password_resets"
+                        },
+                        {
+                            "0": "personal_access_tokens"
+                        },
+                        {
+                            "0": "products"
+                        },
+                        {
+                            "0": "users"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_justanotheronlinestore_db",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 14.586ms"
+                    },
+                    "totalRowCount": 8,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SHOW TABLES"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 11,
+                "end": 11,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "fd223b62-bb70-4102-e92b-f7f452220d69",
+                            "content": "OK, 0 records retrieved in 19.451ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 12,
+                "end": 12,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "a5e015c7-acc5-40b0-9055-9d64de1f43a2",
+                            "content": "OK, 0 records retrieved in 3.61ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 23
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 13,
+                "end": 13,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "91e67a61-531d-42ac-c5ae-fae756e249c2",
+                            "content": "OK, 0 records retrieved in 1.552ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 14,
+                "end": 14,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "8f21d99b-42c9-460e-ce76-2eac7483f3d2",
+                            "content": "OK, 0 records retrieved in 2.118ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 21
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 15,
+                "end": 15,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 0,
+                            "index": 0,
+                            "content": "MySQL Error (1064): ClassicSession.run_sql: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SCHEMA users' at line 1",
+                            "language": "ansi"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 18
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 16,
+                "end": 16,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "0fc5789f-e123-49e3-8ca8-c87fb1712f03"
+                    ]
+                },
+                "currentHeight": 351.984375,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 13
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "36b66635-9443-4453-8d3a-f6448c6027dc",
+                    "resultId": "0fc5789f-e123-49e3-8ca8-c87fb1712f03",
+                    "rows": [
+                        {
+                            "0": "aj_simple_mvc_db"
+                        },
+                        {
+                            "0": "aj_test_db"
+                        },
+                        {
+                            "0": "ajblog_db"
+                        },
+                        {
+                            "0": "cars_db"
+                        },
+                        {
+                            "0": "crowdfund_db"
+                        },
+                        {
+                            "0": "dish_db"
+                        },
+                        {
+                            "0": "ecommerce_db"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "justanotheronlinestore_db"
+                        },
+                        {
+                            "0": "kanjava_music_db"
+                        },
+                        {
+                            "0": "klutch_db"
+                        },
+                        {
+                            "0": "library_db"
+                        },
+                        {
+                            "0": "logico"
+                        },
+                        {
+                            "0": "museum_db"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "python_news_db"
+                        },
+                        {
+                            "0": "recipe_db"
+                        },
+                        {
+                            "0": "sys"
+                        },
+                        {
+                            "0": "tech_blog_db"
+                        },
+                        {
+                            "0": "test_schema_1"
+                        },
+                        {
+                            "0": "traveller_db"
+                        },
+                        {
+                            "0": "user_db"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 23 records retrieved in 55.358ms"
+                    },
+                    "totalRowCount": 23,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SHOW SCHEMAS"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 17,
+                "end": 17,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "c8fe3171-c8e3-4d35-855a-826d6f9a5038",
+                            "content": "OK, 0 records retrieved in 7.598ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 30
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 18,
+                "end": 18,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 0,
+                            "index": 0,
+                            "content": "MySQL Error (1064): ClassicSession.run_sql: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users' at line 1",
+                            "language": "ansi"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
+                },
+                "currentHeight": 39.65625,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 17
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 19,
+                "end": 19,
                 "language": "mysql",
                 "currentHeight": 180,
                 "statements": [
