@@ -249,4 +249,9 @@ php artisan make: migration create_orders_table
 
 - now we create an item migration with two foreign ids. One order_id on orders and another product id on products
 
+===============
 
+Chapter 27 - Product Purchase
+
+- create a cart/purchase route, which is only available for authenticated users. 
+- we modify the cart/index view to show a route if the number of products is greater than 0
