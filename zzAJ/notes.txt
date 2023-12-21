@@ -188,23 +188,23 @@ Chapter 21 - Login system
 
 =========
 
-Chapter 22 - Refactoring User 
+Chapter 22 - Refactoring User
 
-- successfuly implemented login system and now we will make changes to the User model to improve the store application and manage user roles 
+- successfuly implemented login system and now we will make changes to the User model to improve the store application and manage user roles
 - need to alter the user migration by using artisan
 - we add two columns to the users table. Role (default is client), but admins will be able to access the Admin Panel. Balance will store the users balance which we will use for purchase functionality
 - to actually execute the migration we run php artisan migrate
-- Lesson learned: be careful with migrations as it can cause problems if you try to make the same table again twice. 
-- we ran into an issue since we updated the user model to require a balance when registering, but since we don't have a form for them to enter that in it gave us an issue, so I had to go into the model and add that in the insert statement so all users have it from the start but its not required. 
-- by default, users are 'client', so they can't access the admin panel so what we did is use "tinker" which is laravels command line tool / shell and manually created a new user with the role of admin. 
+- Lesson learned: be careful with migrations as it can cause problems if you try to make the same table again twice.
+- we ran into an issue since we updated the user model to require a balance when registering, but since we don't have a form for them to enter that in it gave us an issue, so I had to go into the model and add that in the insert statement so all users have it from the start but its not required.
+- by default, users are 'client', so they can't access the admin panel so what we did is use "tinker" which is laravels command line tool / shell and manually created a new user with the role of admin.
 - later on, I will implement Faker to automatically generate fake users and products.
 - TODO: need to re-create products with proper images
 
 ===============
-Chapter 23 - AdminAuthMiddleware 
+Chapter 23 - AdminAuthMiddleware
 
-- we want to restrict access to the admin panel for just admins. We can use gates and policies but instead we're going to use Laravel Middleware. 
-- this provides a convenient mechanism for inspecting and filtering HTTP requests entering the app. 
+- we want to restrict access to the admin panel for just admins. We can use gates and policies but instead we're going to use Laravel Middleware.
+- this provides a convenient mechanism for inspecting and filtering HTTP requests entering the app.
 - ex: Laravel includes a midleware that verifies your app's user is authenticated and if not, the middleware will redirect the user to the login screen, but if they are authenticated, the middleware will alow the request to proceed further
 
 ============
@@ -215,8 +215,8 @@ Chapter 24 - Introduction to Web Session
 - in HTTP, every request creates a new connection, and each new request knows nothing about prior requests. It holds no state data
 - Yet, how does the application know if you are logged in or logged out or already registed? Laravel increases the HTTP protocol capabilities using Laravel sessios
 
-- Larevel sessions provide a way to store information about the user across multiple requests. 
-- User info is typically placed in a persistent store that can be accessed form subsequent requests. 
+- Larevel sessions provide a way to store information about the user across multiple requests.
+- User info is typically placed in a persistent store that can be accessed form subsequent requests.
 - By default, laravel uses a file session driver. This driver stores the session data in files inside the storage/framework/sessions folder
 -  example: a user goes to the home page and laravel checks if its the first time the user accesses the application, if true it generates a sessio id for the user and also created a new file linked to the generated session id. Laravel stores the user state data in the previous file. it then sends an HTTP response to the user with the home page (with corresponding HTML, CSS, and JavaScript code) which is rendered in the browser. Laravel sends the session id inside the HTTP response. The session id will be stored inside a cookie (called laravel_session) in the user browser. The user browser will send the cookie info (session id) in subsequent user requests to the server. now when the user goes to the login page, Laravel senda an HTTP request with the login form and once completed, Laravel updates the session id for for logged user which is logged in the laravel_session cookie in the user browser. Finally, Laravel redirects the user to the home page. Since the user is logged in, it displays the logout button. All subsequent requests will display this because the corresponding session file contains the keys indicating the user is logged in. It works this way until eithr the user logs out (which generates a new session file and a new session id), or until the session expires (which is 120 minutes by default)
 
@@ -224,13 +224,13 @@ Chapter 24 - Introduction to Web Session
 
 ==============
 
-Chapter 25 - Shopping Cart 
+Chapter 25 - Shopping Cart
 
-- create a cart controller where we add the products stored in the session throught request-> session->get("products") and it's quantity so we can later calculate the total 
-- add in a button for delete and empty items from cart 
-- we add in a new static method in the products model that takes the sumPricesByQuantities 
+- create a cart controller where we add the products stored in the session throught request-> session->get("products") and it's quantity so we can later calculate the total
+- add in a button for delete and empty items from cart
+- we add in a new static method in the products model that takes the sumPricesByQuantities
 - we add three new routes: cart.index, cart.delete, cart.add
-- we add a nav link to cart.index 
+- we add a nav link to cart.index
 - we add a form for "add to cart"
 =======
 
@@ -243,9 +243,9 @@ Chapter 26 - Orders and Items
 
 php artisan make: migration create_orders_table
 
-- then we will update the database/migrations/ file 
+- then we will update the database/migrations/ file
 
-- then we set up a foreign key for the user_id column of the users table 
+- then we set up a foreign key for the user_id column of the users table
 
 - now we create an item migration with two foreign ids. One order_id on orders and another product id on products
 
@@ -253,12 +253,38 @@ php artisan make: migration create_orders_table
 
 Chapter 27 - Product Purchase
 
-- create a cart/purchase route, which is only available for authenticated users. 
+- create a cart/purchase route, which is only available for authenticated users.
 - we modify the cart/index view to show a route if the number of products is greater than 0
 - we define the purchase method that is the most complex
 - first, we check to see if the user has products in session. If not, we redirect them to the cart.index route. If there are products, we create an Order with the logged user id,
-and a purchase total of 0 (we will update later). We create this Order because we need to access the order ID to create items.
+- and a purchase total of 0 (we will update later). We create this Order because we need to access the order ID to create items.
 - then, we iterate through the productsInCart. For each product in productsInCart, we create a new item, set the corresponding quantiy (based on the values stored in the session), price,
-price id, and order id, then we save the item and update the total value
+- price id, and order id, then we save the item and update the total value
 - then we update the order total and save it. Then we calculate and set the new user's balance. We then remove the products in session, and show the cart.purchase view with the order
 - TODO: need to add verification on if the user has enough money to purchase
+
+==============
+
+Chapter 28 - Orders page
+
+- creating a page where users can list their orders
+- we create a new route for "my-account/orders", and a nav link there
+- then we create a MyAccountController.php file that uses an orders method to collect the orders based on the authenticated user id and displays the myaccount.orders view (which we need to create)
+- we use a @forelse loop in the view to allow us to define an empty message in case the user doesn't have any orders so that we can display a messaging saying "no orders found"
+- then we have a second @foreach when we iterate through the items of each order using the getitems() method and access the product properties of each item using the getProduct() method and display the product name and link to the product.
+- we are easily accessing order relationships ($item->getProduct()->getName() which shows the power of Eloquent relationships
+- ex:
+
+Product::where('name', 'iPhone')->first()->getItems()[0]->getOrder()->getUser()->getName();
+
+- Lazy loading vs. eager loading:
+
+- the silent cost of Eloquent relationships is that the related models are "lazy loaded" when we access the Eloquent relationships as attributes which means the relationship data is not loaded until you first access the attribute.
+- For example, if we have 10 orders , in our orders blade template we have a @forelse which iterates through each order and extracts the corresponding items and since Eloquent uses lazy loading,
+for each order, laravel will make an extra database query to collect the information of the items related to each order (another 10 queries). And since we are extracting the product name of each item, will execute another 10, so in this scenario it would execute at least 21 queries to show the orders page (which impacts our app performance)
+
+- luckily, with "eager loading", Eloquent can reduce the number of relationships using the "with" method
+
+- install a laravel debug bar to help show the difference between lazy loading and eager loading
+composer require barryvdh/laravel-debugbar --dev
+
