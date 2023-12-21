@@ -72,7 +72,6 @@ If your README is long, add a table of contents to make it easy for users to fin
   - [Credits](#credits)
   - [License](#license)
   - [Features](#features)
-  - [How to Contribute](#how-to-contribute)
   - [Tests](#tests)
   - [Deployment](#deployment)
   - [Demo](#demo)
@@ -92,9 +91,11 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ``` -->
 
-    - 2023-12-20 02:27:59
-    - POST request (adding in data via the form and automatically displaying the newly added product in the table)
-    ![gif](assets/chrome-capture-2023-12-20.gif)
+    <!-- - 2023-12-20 02:27:59 -->
+    <!-- - POST request (adding in data via the form and automatically displaying the newly added product in the table) -->
+    
+
+![gif](assets/chrome-capture-2023-12-20.gif)
 
 
 
@@ -123,10 +124,17 @@ If you followed tutorials, include links to those here as well. -->
 Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time. -->
 
 ## Features
-
+- CRUD 
+- MVC
+- Laravel
+- Laravel UI with bootstrap
+- user authentification
+- allow users to add products and upload images 
+- Admin panel that allows only registered admins to edit all of the products on the site 
+- mysql 
 <!-- If your project has a lot of features, list them here. -->
 
-## How to Contribute
+<!-- ## How to Contribute -->
 
 <!-- If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer. -->
 
