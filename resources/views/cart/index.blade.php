@@ -35,12 +35,18 @@
             <div class="row">
                 <div class="text-end">
                     <a class="btn btn-outline-secondary mb-2"> <b> Total to Pay: </b> ${{ $viewData['total'] }}</a>
-                    <a class="btn bg-primary text-white mb-2"> Purchase: </a>
-                    <a href="{{ route('cart.delete') }}">
-                        <button class="btn btn-danger mb-2">
-                            Remove all products from Cart
-                        </button>
-                        <a>
+                    {{-- only for authorized users --}}
+                    @if (count($viewData['products']) > 0)
+                        <a href="{{ route('cart.purchase') }}" class="btn bg-primary text-white mb-2">
+                            Purchase </a>
+
+                        {{-- <a class="btn bg-primary text-white mb-2"> Purchase: </a> --}}
+                        <a href="{{ route('cart.delete') }}">
+                            <button class="btn btn-danger mb-2">
+                                Remove all products from Cart
+                            </button>
+                            <a>
+                    @endif
                 </div>
             </div>
         </div>
