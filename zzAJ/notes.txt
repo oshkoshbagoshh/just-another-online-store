@@ -185,3 +185,17 @@ Chapter 21 - Login system
 
 - breeze is laravels auth system but for now we will just use larevel/ui
 - we also install the ui bootstrap --auth which comes with some auth controllers and some views like for logging in and registering users
+
+=========
+
+Chapter 22 - Refactoring User 
+
+- successfuly implemented login system and now we will make changes to the User model to improve the store application and manage user roles 
+- need to alter the user migration by using artisan
+- we add two columns to the users table. Role (default is client), but admins will be able to access the Admin Panel. Balance will store the users balance which we will use for purchase functionality
+- to actually execute the migration we run php artisan migrate
+- Lesson learned: be careful with migrations as it can cause problems if you try to make the same table again twice. 
+- we ran into an issue since we updated the user model to require a balance when registering, but since we don't have a form for them to enter that in it gave us an issue, so I had to go into the model and add that in the insert statement so all users have it from the start but its not required. 
+- by default, users are 'client', so they can't access the admin panel so what we did is use "tinker" which is laravels command line tool / shell and manually created a new user with the role of admin. 
+- later on, I will implement Faker to automatically generate fake users and products.
+- TODO: need to re-create products with proper images
