@@ -26,4 +26,5 @@ Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProdu
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// default laravel ui home route
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
