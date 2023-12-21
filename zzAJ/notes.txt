@@ -226,4 +226,27 @@ Chapter 24 - Introduction to Web Session
 
 Chapter 25 - Shopping Cart 
 
+- create a cart controller where we add the products stored in the session throught request-> session->get("products") and it's quantity so we can later calculate the total 
+- add in a button for delete and empty items from cart 
+- we add in a new static method in the products model that takes the sumPricesByQuantities 
+- we add three new routes: cart.index, cart.delete, cart.add
+- we add a nav link to cart.index 
+- we add a form for "add to cart"
+=======
+
+Chapter 26 - Orders and Items
+
+- for Orders, we need to store Id, Date, Total, User id, User name
+- Ordes are composed of items, so for each item we need to store:
+- Quantity, Product id, Product name, Price, Item Id
+- to make the order migration, run:
+
+php artisan make: migration create_orders_table
+
+- then we will update the database/migrations/ file 
+
+- then we set up a foreign key for the user_id column of the users table 
+
+- now we create an item migration with two foreign ids. One order_id on orders and another product id on products
+
 
