@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Database\Eloquent\Factories\HasFactory; //TODO: add in a factory with fake data later
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Item;
 
 class Product extends Model
 {
@@ -12,7 +13,7 @@ class Product extends Model
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-12-19 19:29:45
  * @Last Modified by:   Someone
- * @Last Modified time: 2023-12-21 02:00:31
+ * @Last Modified time: 2023-12-21 12:29:26
  * @Description: file:///Users/aj/sandbox/just-another-online-store/app/Models/Product.php
  *
  * PRODUCT ATTRICUTES
@@ -23,6 +24,7 @@ class Product extends Model
  * $this->attributes['price'] - int - contains the product price
  * $this->attributes['created_at'] - timestamp - contains the product creation date
  * $this->attributes['updated_at'] - timestamp - contains the product updated date
+ * $this->items - Item[] - contains the associated items
  */
 
  public function getid()
@@ -138,6 +140,22 @@ public static function sumPricesByQuantities($products, $productsInSession)
 }
 
 // public function getId()
+
+// items
+public function items()
+{
+    return $this->hasMany(Item::class);
+}
+
+public function getItems()
+{
+    return $this->items;
+}
+
+public function setItems($items)
+{
+    $this->items = $items;
+}
 
 
 
