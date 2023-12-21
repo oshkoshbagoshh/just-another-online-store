@@ -26,4 +26,17 @@ class ProductController extends Controller
         $viewData["product"] = $product;
         return view('product.show')->with("viewData", $viewData);
     }
+
+    // delete a product
+    public function delete($id)
+    {
+        Product::destroy($id);
+        return back(); // return the user back to the previous user location
+    }
+
+
+
+
+
+// =====================
 }

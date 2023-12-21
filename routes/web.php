@@ -32,9 +32,12 @@ Route::post('/admin/products/store','App\Http\Controllers\Admin\AdminProductCont
 
 
 
-
+// Read products
 Route::get("/admin/products", 'App\Http\Controllers\Admin\AdminProductController@index')->name("admin.product.index");
 
+
+// Delete products route
+Route::delete('/admin/products/{id}/delete','App\Http\Controllers\Admin\AdminProductController@delete')->name("admin.product.delete");
 
 
 ?>
