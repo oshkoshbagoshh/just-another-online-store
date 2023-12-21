@@ -166,3 +166,14 @@ Chapter 18 - Create Products with Images
 Chapter 19 - Edit and Delete Products
 
 
+- through the admin panel, we edited our form to create two new buttons (using bootstrap icons library)
+- the delete button is tied to a DELETE HTTP route in the controller
+- edit button takes the user to another view where they can fill out another form that uses HTTP PUT requests to update / edit the data
+- NOTE: there is a default upload limit of 2MB so you have to update that in your php.ini file, or make sure to use images under 2MB
+- TODO: add in a note letting the user know about that
+=============
+
+Chapter 20 - Refactoring Validations
+
+- move the duplicated controller validations to a single place. Place them inside a static method called validate inside our Product model class.
+- always try to move your model validations away from controllers 

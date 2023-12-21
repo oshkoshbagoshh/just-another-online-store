@@ -37,7 +37,7 @@ class Product extends Model
 
  public function getName() {
 
-    //2023-12-19 20:37:26 - reformatted name 
+    //2023-12-19 20:37:26 - reformatted name
     return strtoupper($this->attributes['name']);
  }
 
@@ -101,6 +101,15 @@ class Product extends Model
 
 }
 
+public static function validate($request)  {
+    //
+    $request ->validate([
+        "name" => "required|max:255",
+        "description" => "required",
+        "price" => "required|numeric|gt:0",
+        "image" => "image",
+    ]);
+}
 
 
 
