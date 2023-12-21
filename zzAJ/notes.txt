@@ -199,3 +199,10 @@ Chapter 22 - Refactoring User
 - by default, users are 'client', so they can't access the admin panel so what we did is use "tinker" which is laravels command line tool / shell and manually created a new user with the role of admin. 
 - later on, I will implement Faker to automatically generate fake users and products.
 - TODO: need to re-create products with proper images
+
+===============
+Chapter 23 - AdminAuthMiddleware 
+
+- we want to restrict access to the admin panel for just admins. We can use gates and policies but instead we're going to use Laravel Middleware. 
+- this provides a convenient mechanism for inspecting and filtering HTTP requests entering the app. 
+- ex: Laravel includes a midleware that verifies your app's user is authenticated and if not, the middleware will redirect the user to the login screen, but if they are authenticated, the middleware will alow the request to proceed further 
