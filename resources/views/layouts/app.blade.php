@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <title> @yield('title', 'Online Store') </title>
+    <title> @yield('title', 'JAOS') </title>
 </head>
 
 <body>
@@ -30,6 +30,8 @@
                         <a class="nav-link active" href="{{ route('login') }}"> Login </a>
                         <a class="nav-link active" href="{{ route('register') }}"> Register </a>
                         @else
+                        {{-- My Orders --}}
+                        <a class="nav-link  active" href="{{ route('myaccount.orders') }}"> My Orders </a>
                         <form id="logout" action="{{ route('logout') }}" method="POST">
                             <a role="button" class="nav-link active"
                             onclick="document.getElementById('logout').submit();"> Logout </a>
