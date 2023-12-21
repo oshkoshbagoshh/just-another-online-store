@@ -26,8 +26,10 @@ class userstableseeder extends Seeder
                 'name' => $faker->name,
                 'email' => $faker->email,
                 'password' => $faker->password,
-                'role' => $faker->role,
-                'remember_token' => $faker->remember_token,
+                // 'role' => $faker->role,
+                // 'remember_token' => $faker->remember_token,
+                // 'balance' => $faker->balance,
+                'balance' => '1000',
             ]);
         }
     }

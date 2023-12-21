@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Database\Eloquent\Factories\HasFactory; //TODO: add in a factory with fake data later
+use Illuminate\Database\Eloquent\Factories\HasFactory; //TODO: add in a factory with fake data later
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Item;
 
@@ -27,6 +27,12 @@ class Product extends Model
  * $this->items - Item[] - contains the associated items
  */
 
+    // factory
+
+    use HasFactory;
+
+
+    
  public function getid()
  {
     return $this->attributes['id'];
