@@ -176,4 +176,12 @@ Chapter 19 - Edit and Delete Products
 Chapter 20 - Refactoring Validations
 
 - move the duplicated controller validations to a single place. Place them inside a static method called validate inside our Product model class.
-- always try to move your model validations away from controllers 
+- always try to move your model validations away from controllers
+
+
+=====
+
+Chapter 21 - Login system
+
+- breeze is laravels auth system but for now we will just use larevel/ui
+- we also install the ui bootstrap --auth which comes with some auth controllers and some views like for logging in and registering users

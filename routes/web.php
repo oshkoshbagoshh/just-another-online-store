@@ -23,3 +23,8 @@ Route::post('/admin/products/store', 'App\Http\Controllers\Admin\AdminProductCon
 Route::delete('/admin/products/{id}/delete', 'App\Http\Controllers\Admin\AdminProductController@delete')->name("admin.product.delete");
 Route::get('/admin/products/{id}/edit', 'App\Http\Controllers\Admin\AdminProductController@edit')->name("admin.product.edit");
 Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')->name("admin.product.update");
+
+Auth::routes();
+
+// default laravel ui home route
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
