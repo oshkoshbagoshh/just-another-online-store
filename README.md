@@ -128,10 +128,13 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 - MVC
 - Laravel
 - Laravel UI with bootstrap
+- Eloquent ORM (used to talk to the database)
 - user authentification
+- middleware
 - allow users to add products and upload images 
 - Admin panel that allows only registered admins to edit all of the products on the site 
-- mysql 
+- MySQL
+- curl (used to download images from unsplash)
 <!-- If your project has a lot of features, list them here. -->
 
 <!-- ## How to Contribute -->
