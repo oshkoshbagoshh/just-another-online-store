@@ -255,3 +255,10 @@ Chapter 27 - Product Purchase
 
 - create a cart/purchase route, which is only available for authenticated users. 
 - we modify the cart/index view to show a route if the number of products is greater than 0
+- we define the purchase method that is the most complex
+- first, we check to see if the user has products in session. If not, we redirect them to the cart.index route. If there are products, we create an Order with the logged user id,
+and a purchase total of 0 (we will update later). We create this Order because we need to access the order ID to create items.
+- then, we iterate through the productsInCart. For each product in productsInCart, we create a new item, set the corresponding quantiy (based on the values stored in the session), price,
+price id, and order id, then we save the item and update the total value
+- then we update the order total and save it. Then we calculate and set the new user's balance. We then remove the products in session, and show the cart.purchase view with the order
+- TODO: need to add verification on if the user has enough money to purchase
