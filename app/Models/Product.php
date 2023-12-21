@@ -12,7 +12,7 @@ class Product extends Model
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-12-19 19:29:45
  * @Last Modified by:   Someone
- * @Last Modified time: 2023-12-19 20:37:24
+ * @Last Modified time: 2023-12-21 02:00:31
  * @Description: file:///Users/aj/sandbox/just-another-online-store/app/Models/Product.php
  *
  * PRODUCT ATTRICUTES
@@ -111,6 +111,33 @@ public static function validate($request)  {
     ]);
 }
 
+//  Sum prices by quantity for the cart
+/**
+ * The function calculates the total price by multiplying the price of each product with its
+ * corresponding quantity and summing them up.
+ *
+ * @param products An array of Product objects. Each Product object has a getPrice() method that
+ * returns the price of the product.
+ * @param productsInSession An array that contains the quantities of each product in the session. The
+ * keys of the array are the product IDs and the values are the quantities.
+ *
+ * @return the total sum of prices calculated by multiplying the price of each product with the
+ * corresponding quantity in the  array.
+ */
+public static function sumPricesByQuantities($products, $productsInSession)
+{
+    $total = 0;
+    foreach ($products as $product) {
+        $total = $total + ($product->getPrice()* $productsInSession[$product->getId()]);
+
+    }
+
+
+    return $total;
+
+}
+
+// public function getId()
 
 
 

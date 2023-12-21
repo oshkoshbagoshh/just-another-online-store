@@ -205,4 +205,25 @@ Chapter 23 - AdminAuthMiddleware
 
 - we want to restrict access to the admin panel for just admins. We can use gates and policies but instead we're going to use Laravel Middleware. 
 - this provides a convenient mechanism for inspecting and filtering HTTP requests entering the app. 
-- ex: Laravel includes a midleware that verifies your app's user is authenticated and if not, the middleware will redirect the user to the login screen, but if they are authenticated, the middleware will alow the request to proceed further 
+- ex: Laravel includes a midleware that verifies your app's user is authenticated and if not, the middleware will redirect the user to the login screen, but if they are authenticated, the middleware will alow the request to proceed further
+
+============
+
+Chapter 24 - Introduction to Web Session
+
+- HTTP has some limitations, as it is a stateless protocol, meaning that the server does not keep any data(state) between two requests.
+- in HTTP, every request creates a new connection, and each new request knows nothing about prior requests. It holds no state data
+- Yet, how does the application know if you are logged in or logged out or already registed? Laravel increases the HTTP protocol capabilities using Laravel sessios
+
+- Larevel sessions provide a way to store information about the user across multiple requests. 
+- User info is typically placed in a persistent store that can be accessed form subsequent requests. 
+- By default, laravel uses a file session driver. This driver stores the session data in files inside the storage/framework/sessions folder
+-  example: a user goes to the home page and laravel checks if its the first time the user accesses the application, if true it generates a sessio id for the user and also created a new file linked to the generated session id. Laravel stores the user state data in the previous file. it then sends an HTTP response to the user with the home page (with corresponding HTML, CSS, and JavaScript code) which is rendered in the browser. Laravel sends the session id inside the HTTP response. The session id will be stored inside a cookie (called laravel_session) in the user browser. The user browser will send the cookie info (session id) in subsequent user requests to the server. now when the user goes to the login page, Laravel senda an HTTP request with the login form and once completed, Laravel updates the session id for for logged user which is logged in the laravel_session cookie in the user browser. Finally, Laravel redirects the user to the home page. Since the user is logged in, it displays the logout button. All subsequent requests will display this because the corresponding session file contains the keys indicating the user is logged in. It works this way until eithr the user logs out (which generates a new session file and a new session id), or until the session expires (which is 120 minutes by default)
+
+- sessions can also be used to save tokens, last page visited by the user, and even products added to the cart. It's good for storing temp data that you don't need to keep permanently
+
+==============
+
+Chapter 25 - Shopping Cart 
+
+
