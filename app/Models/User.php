@@ -158,5 +158,8 @@ class User extends Authenticatable
         $this->orders = $orders;
     }
 
+    // INSERT COUPON CODE HERE
+    
+
     //  END OF USER MODEL
 }

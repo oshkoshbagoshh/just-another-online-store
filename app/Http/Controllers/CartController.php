@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Ui\AuthCommand;
 
 class CartController extends Controller
 {
@@ -22,7 +23,7 @@ class CartController extends Controller
         }
 
         $viewData = [];
-        $viewData["title"] = "Cart - Online Store";
+        $viewData["title"] = "Cart - JAOS";
         $viewData["subtitle"] =  "Shopping Cart";
         $viewData["total"] = $total;
         $viewData["products"] = $productsInCart;
@@ -70,13 +71,15 @@ class CartController extends Controller
             $order->save();
 
             $newBalance = Auth::user()->balance - $total;
+            //display the new balance
+
             Auth::user()->balance = $newBalance;
             Auth::user()->save();
 
             $request->session()->forget('products');
 
             $viewData = [];
-            $viewData["title"] = "Purchase - Online Store";
+            $viewData["title"] = "Purchase - JAOS";
             $viewData["subtitle"] =  "Purchase Status";
             $viewData["order"] =  $order;
             return view('cart.purchase')->with("viewData", $viewData);
