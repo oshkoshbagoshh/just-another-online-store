@@ -8,6 +8,9 @@
 - database cleanup (update faker factories)
 - images 
 - Stripe API:
+- Issues list
+- balance / calculate payments
+- Coupons
 - 	
 Public:
 pk_test_51NYu1ML9zoTSpcm6Fcd59ksXDkyeqil9Aguc2LZrC1aTkgms0547oiV1SAkf8qxguUiersmOGHQjNh9cRQwZAjMA00SXygeYKO
