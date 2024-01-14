@@ -20,9 +20,9 @@ class ProductFactory extends Factory
     {
         return [
             // fake products go here:
-            'name' => $this->faker->word(),
+            'name' => $this->faker->word(), // $this->faker->word() is a random word
             'description' => $this->faker->sentence(),
-            'image' => $this->faker->imageUrl(640, 480, 'products', true),
+            'image' => $this->faker->imageUrl(640, 480, 'products', true), // 'products' is the folder name in public/storage
             'price' => $this->faker->numberBetween(100, 10000),
         ];
     }
