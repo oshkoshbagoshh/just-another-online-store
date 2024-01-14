@@ -85,17 +85,14 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ``` -->
 
-    <!-- - 2023-12-20 02:27:59 -->
-    <!-- - POST request (adding in data via the form and automatically displaying the newly added product in the table) -->
-    
 
 ![gif](assets/chrome-capture-2023-12-20.gif)
-
+![gif](assets/chrome-capture-2024-1-13.gif)
 
 
 ## Credits
 * AJ Javadi 
-* 
+  
 <!-- 
 List your collaborators, if any, with links to their GitHub profiles.
 
@@ -138,11 +135,12 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 ## Tests
 
 <!-- Go the extra mile and write tests for your application. Then provide examples on how to run them here. -->
-
+- PHP Code Sniffer
+  
 
 ## Deployment 
 
-- will deploy onto Heroku when finished building 
+- will deploy onto Heroku when finished building (Heroku)
 
 ## Demo 
 
