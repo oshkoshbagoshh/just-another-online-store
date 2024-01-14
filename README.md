@@ -46,6 +46,7 @@ We have a __User__ class with its data (id, name, email, password, etc.) which c
 - Integrate with Google trends API to display the trending products
 - Integrate with openAI API to generate product descriptions
 - Integrate with Stripe API to process payments
+- PHP Code Sniffer is used to keep clean coding standards
 
 ---
 
