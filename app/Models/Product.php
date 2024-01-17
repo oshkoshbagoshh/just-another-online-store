@@ -33,91 +33,100 @@ class Product extends Model
 
 
     
- public function getid()
- {
-    return $this->attributes['id'];
- }
+    public function getid()
+    {
+        return $this->attributes['id'];
+    }
 
- public function setid($id)
- {
-    $this->attributes['id'] = $id;
- }
+    public function setid($id)
+    {
+        $this->attributes['id'] = $id;
+    }
 
- public function getName() {
+    public function getName()
+    {
 
-    //2023-12-19 20:37:26 - reformatted name
-    return strtoupper($this->attributes['name']);
- }
+       //2023-12-19 20:37:26 - reformatted name
+        return strtoupper($this->attributes['name']);
+    }
 
- public function setName($name) {
+    public function setName($name)
+    {
 
-    $this->attributes['name'] = $name;
- }
+        $this->attributes['name'] = $name;
+    }
 
- public function getDescription() {
+    public function getDescription()
+    {
 
-    return $this->attributes['description'];
- }
+        return $this->attributes['description'];
+    }
 
- public function setDescription($description) {
+    public function setDescription($description)
+    {
 
-    $this->attributes['description'] = $description;
- }
-
-
- public function getImage() {
-
-    return $this->attributes['image'];
- }
-
- public function setImage($image) {
-
-    $this->attributes['image'] = $image;
-
-}
- public function getPrice() {
-
-    return $this->attributes['price'];
- }
-
- public function setPrice($price) {
-
-    $this->attributes['price'] = $price;
-
-}
+        $this->attributes['description'] = $description;
+    }
 
 
+    public function getImage()
+    {
 
- public function getCreatedAt() {
+        return $this->attributes['image'];
+    }
 
-    return $this->attributes['created_at'];
- }
+    public function setImage($image)
+    {
 
- public function setCreatedAt($createdAt) {
+        $this->attributes['image'] = $image;
+    }
+    public function getPrice()
+    {
 
-    $this->attributes['created_at'] = $createdAt;
+        return $this->attributes['price'];
+    }
 
-}
- public function getUpdatedAt() {
+    public function setPrice($price)
+    {
 
-    return $this->attributes['updated_at'];
- }
+        $this->attributes['price'] = $price;
+    }
 
- public function setUpdatedAt($updatedAt) {
 
-    $this->attributes['updated_at'] = $updatedAt;
 
-}
+    public function getCreatedAt()
+    {
 
-public static function validate($request)  {
-    //
-    $request ->validate([
+        return $this->attributes['created_at'];
+    }
+
+    public function setCreatedAt($createdAt)
+    {
+
+        $this->attributes['created_at'] = $createdAt;
+    }
+    public function getUpdatedAt()
+    {
+
+        return $this->attributes['updated_at'];
+    }
+
+    public function setUpdatedAt($updatedAt)
+    {
+
+        $this->attributes['updated_at'] = $updatedAt;
+    }
+
+    public static function validate($request)
+    {
+        //
+        $request ->validate([
         "name" => "required|max:255",
         "description" => "required",
         "price" => "required|numeric|gt:0",
         "image" => "image",
-    ]);
-}
+        ]);
+    }
 
 //  Sum prices by quantity for the cart
 /**
@@ -132,36 +141,34 @@ public static function validate($request)  {
  * @return the total sum of prices calculated by multiplying the price of each product with the
  * corresponding quantity in the  array.
  */
-public static function sumPricesByQuantities($products, $productsInSession)
-{
-    $total = 0;
-    foreach ($products as $product) {
-        $total = $total + ($product->getPrice()* $productsInSession[$product->getId()]);
+    public static function sumPricesByQuantities($products, $productsInSession)
+    {
+        $total = 0;
+        foreach ($products as $product) {
+            $total = $total + ($product->getPrice()* $productsInSession[$product->getId()]);
+        }
 
+
+        return $total;
     }
-
-
-    return $total;
-
-}
 
 // public function getId()
 
 // items
-public function items()
-{
-    return $this->hasMany(Item::class);
-}
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
 
-public function getItems()
-{
-    return $this->items;
-}
+    public function getItems()
+    {
+        return $this->items;
+    }
 
-public function setItems($items)
-{
-    $this->items = $items;
-}
+    public function setItems($items)
+    {
+        $this->items = $items;
+    }
 
 
 

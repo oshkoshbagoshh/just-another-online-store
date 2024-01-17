@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
 
-
-
 // My Account Controller
-class MyAcccountController extends Controller {
+class MyAcccountController extends Controller
+{
     // orders
     public function orders()
     {
