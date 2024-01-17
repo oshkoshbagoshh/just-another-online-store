@@ -7,8 +7,6 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use Faker\Factory as Faker;
 
-
-
 class userstableseeder extends Seeder
 {
     /**
@@ -21,7 +19,7 @@ class userstableseeder extends Seeder
         //
         $faker = Faker::create();
 
-        foreach(range(1,10) as $index){
+        foreach (range(1, 10) as $index) {
             User::create([
                 'name' => $faker->name,
                 'email' => $faker->email,
