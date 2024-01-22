@@ -141,7 +141,10 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 
 ## Deployment 
 
-- will deploy onto Heroku when finished building (Heroku)
+![Heroku] (https://secure-thicket-93616-081173c34e9f.herokuapp.com/)
+
+
+
 
 ## Demo 
 
