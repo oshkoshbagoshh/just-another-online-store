@@ -17,6 +17,6 @@ class ProductsTableSeeder extends Seeder
     {
         //
         // Create 50 product records using the factory
-        Product::factory()->count(50)->create();
+        Product::factory()->count(5)->create();
     }
 }
