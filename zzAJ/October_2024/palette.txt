@@ -1,0 +1,35 @@
+/* Klutch Belgium Style - https://coolors.co/000000-f1c40f-748cab-fffbfc-f7af9d */
+
+- Tailwind
+
+{ 'black': { DEFAULT: '#000000', 100: '#000000', 200: '#000000', 300: '#000000', 400: '#000000', 500: '#000000', 600: '#333333', 700: '#666666', 800: '#999999', 900: '#cccccc' }, 'jonquil': { DEFAULT: '#f1c40f', 100: '#302703', 200: '#604e06', 300: '#917508', 400: '#c19c0b', 500: '#f1c40f', 600: '#f4cf3e', 700: '#f7db6e', 800: '#f9e79f', 900: '#fcf3cf' }, 'silver_lake_blue': { DEFAULT: '#748cab', 100: '#151c24', 200: '#2b3747', 300: '#40536b', 400: '#566e8f', 500: '#748cab', 600: '#8fa2bc', 700: '#abb9cd', 800: '#c7d1dd', 900: '#e3e8ee' }, 'snow': { DEFAULT: '#fffbfc', 100: '#650019', 200: '#ca0032', 300: '#ff3064', 400: '#ff95af', 500: '#fffbfc', 600: '#fffbfc', 700: '#fffcfd', 800: '#fffdfd', 900: '#fffefe' }, 'melon': { DEFAULT: '#f7af9d', 100: '#4b1406', 200: '#95270c', 300: '#e03b12', 400: '#f17151', 500: '#f7af9d', 600: '#f9beb0', 700: '#facec4', 800: '#fcdfd7', 900: '#fdefeb' } }
+
+- CSV
+
+000000,f1c40f,748cab,fffbfc,f7af9d
+
+- With #
+
+#000000, #f1c40f, #748cab, #fffbfc, #f7af9d
+
+- Array
+
+["000000","f1c40f","748cab","fffbfc","f7af9d"]
+
+- Object
+
+{"Black":"000000","Jonquil":"f1c40f","Silver Lake Blue":"748cab","Snow":"fffbfc","Melon":"f7af9d"}
+
+- Extended Array
+
+[{"name":"Black","hex":"000000","rgb":[0,0,0],"cmyk":[0,0,0,100],"hsb":[0,0,0],"hsl":[0,0,0],"lab":[0,0,0]},{"name":"Jonquil","hex":"f1c40f","rgb":[241,196,15],"cmyk":[0,19,94,5],"hsb":[48,94,95],"hsl":[48,89,50],"lab":[81,2,81]},{"name":"Silver Lake Blue","hex":"748cab","rgb":[116,140,171],"cmyk":[32,18,0,33],"hsb":[214,32,67],"hsl":[214,25,56],"lab":[57,-1,-19]},{"name":"Snow","hex":"fffbfc","rgb":[255,251,252],"cmyk":[0,2,1,0],"hsb":[345,2,100],"hsl":[345,100,99],"lab":[99,2,0]},{"name":"Melon","hex":"f7af9d","rgb":[247,175,157],"cmyk":[0,29,36,3],"hsb":[12,36,97],"hsl":[12,85,79],"lab":[78,24,20]}]
+
+- XML
+
+<palette>
+  <color name="Black" hex="000000" r="0" g="0" b="0" />
+  <color name="Jonquil" hex="f1c40f" r="241" g="196" b="15" />
+  <color name="Silver Lake Blue" hex="748cab" r="116" g="140" b="171" />
+  <color name="Snow" hex="fffbfc" r="255" g="251" b="252" />
+  <color name="Melon" hex="f7af9d" r="247" g="175" b="157" />
+</palette>
